@@ -1,0 +1,537 @@
+
+/* =========================================
+   StockScope - Settings Page CSS Fix
+   ========================================= */
+
+.settings-page,
+.workspace-settings,
+.settings-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 28px;
+  color: #e8eefc;
+  box-sizing: border-box;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+.settings-page *,
+.workspace-settings *,
+.settings-container * {
+  box-sizing: border-box;
+}
+
+/* Page headings */
+
+.settings-page h1,
+.workspace-settings h1,
+.settings-container h1 {
+  margin: 8px 0 12px;
+  color: #f5f7ff;
+  font-size: clamp(28px, 3vw, 38px);
+  font-weight: 750;
+  letter-spacing: -1px;
+}
+
+.settings-page h2,
+.workspace-settings h2,
+.settings-container h2 {
+  margin: 0 0 12px;
+  color: #f1f5ff;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.settings-page p,
+.workspace-settings p,
+.settings-container p {
+  color: #9baac7;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* Settings cards */
+
+.settings-card,
+.settings-section,
+.preference-card {
+  margin: 18px 0;
+  padding: 24px;
+  border: 1px solid #263751;
+  border-radius: 16px;
+  background: linear-gradient(
+    145deg,
+    #151f31 0%,
+    #101827 100%
+  );
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.settings-card:hover,
+.settings-section:hover,
+.preference-card:hover {
+  border-color: #5269a5;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.24);
+}
+
+/* Small section labels */
+
+.settings-eyebrow,
+.settings-page .eyebrow,
+.workspace-settings .eyebrow {
+  color: #9b91ff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Buttons */
+
+.settings-page button,
+.workspace-settings button,
+.settings-container button {
+  min-height: 40px;
+  padding: 10px 16px;
+  border: 1px solid #354761;
+  border-radius: 9px;
+  background: #1a2940;
+  color: #e8eefc;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.settings-page button:hover,
+.workspace-settings button:hover,
+.settings-container button:hover {
+  border-color: #8c9cff;
+  background: #273957;
+  transform: translateY(-1px);
+}
+
+.settings-page button:focus-visible,
+.workspace-settings button:focus-visible,
+.settings-container button:focus-visible {
+  outline: 3px solid rgba(139, 156, 255, 0.4);
+  outline-offset: 2px;
+}
+
+/* Accent and market option groups */
+
+.accent-options,
+.settings-accent-options,
+.market-options,
+.market-coverage-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.accent-options button,
+.settings-accent-options button,
+.market-options button,
+.market-coverage-options button {
+  min-width: 90px;
+  background: #17243a;
+  border-color: #344762;
+}
+
+/* Selected option */
+
+.accent-options button.active,
+.settings-accent-options button.active,
+.market-options button.active,
+.market-coverage-options button.active,
+.settings-page button[aria-pressed="true"],
+.workspace-settings button[aria-pressed="true"] {
+  border-color: #a69bff;
+  background: linear-gradient(
+    135deg,
+    #7464f5,
+    #3979ed
+  );
+  color: #ffffff;
+  box-shadow: 0 5px 16px rgba(91, 101, 245, 0.25);
+}
+
+/* Optional accent color variables */
+
+.accent-violet {
+  --settings-accent: #8b7cff;
+}
+
+.accent-teal {
+  --settings-accent: #2dd4bf;
+}
+
+.accent-amber {
+  --settings-accent: #fbbf24;
+}
+
+/* Inputs and dropdowns */
+
+.settings-page input,
+.settings-page select,
+.settings-page textarea,
+.workspace-settings input,
+.workspace-settings select,
+.workspace-settings textarea,
+.settings-container input,
+.settings-container select,
+.settings-container textarea {
+  width: 100%;
+  min-height: 42px;
+  padding: 10px 12px;
+  border: 1px solid #354761;
+  border-radius: 9px;
+  background: #0d1726;
+  color: #edf3ff;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.settings-page input:focus,
+.settings-page select:focus,
+.settings-page textarea:focus,
+.workspace-settings input:focus,
+.workspace-settings select:focus,
+.workspace-settings textarea:focus {
+  border-color: #8b9cff;
+  outline: 3px solid rgba(139, 156, 255, 0.15);
+}
+
+/* Account buttons */
+
+.account-actions,
+.settings-account-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.account-actions button:first-child,
+.settings-account-actions button:first-child {
+  border-color: #7167f5;
+  background: linear-gradient(
+    135deg,
+    #7464f5,
+    #3979ed
+  );
+  color: #fff;
+}
+
+.account-actions button:last-child,
+.settings-account-actions button:last-child {
+  background: #182438;
+}
+
+/* Privacy notice */
+
+.settings-notice,
+.privacy-notice {
+  padding: 14px 16px;
+  border: 1px solid #2b4862;
+  border-radius: 10px;
+  background: rgba(45, 212, 191, 0.06);
+  color: #a9c6d9;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* Icons */
+
+.settings-page svg,
+.workspace-settings svg,
+.settings-container svg {
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+
+/* Responsive layout */
+
+@media (max-width: 768px) {
+  .settings-page,
+  .workspace-settings,
+  .settings-container {
+    padding: 16px;
+  }
+
+  .settings-card,
+  .settings-section,
+  .preference-card {
+    padding: 18px;
+    border-radius: 13px;
+  }
+
+  .accent-options button,
+  .settings-accent-options button,
+  .market-options button,
+  .market-coverage-options button {
+    flex: 1 1 calc(50% - 10px);
+  }
+
+  .account-actions,
+  .settings-account-actions {
+    flex-direction: column;
+  }
+
+  .account-actions button,
+  .settings-account-actions button {
+    width: 100%;
+  }
+}
+
+/* FIX: Settings buttons not picking up styles */
+
+.settings-card button,
+.settings-section button,
+.preference-card button,
+.settings-page button,
+.workspace-settings button,
+.settings-container button {
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+
+  min-height: 40px !important;
+  padding: 10px 17px !important;
+  margin: 4px 5px 4px 0 !important;
+
+  color: #f5f7ff !important;
+  background: #1b2940 !important;
+  border: 1px solid #3b4d6a !important;
+  border-radius: 9px !important;
+
+  font-family: inherit !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  line-height: 1.4 !important;
+
+  cursor: pointer !important;
+  box-shadow: none !important;
+  transition: all 0.2s ease !important;
+}
+
+.settings-card button:hover,
+.settings-section button:hover,
+.preference-card button:hover,
+.settings-page button:hover,
+.workspace-settings button:hover,
+.settings-container button:hover {
+  color: #ffffff !important;
+  background: #2a3c5b !important;
+  border-color: #8294ff !important;
+  transform: translateY(-1px) !important;
+}
+
+/* Selected buttons */
+.settings-card button.active,
+.settings-section button.active,
+.preference-card button.active,
+.settings-card button[aria-pressed="true"],
+.settings-section button[aria-pressed="true"],
+.preference-card button[aria-pressed="true"] {
+  color: #ffffff !important;
+  background: linear-gradient(135deg, #7667f7, #3979ed) !important;
+  border-color: #9c91ff !important;
+  box-shadow: 0 4px 14px rgba(118, 103, 247, 0.25) !important;
+}
+
+/* Account actions */
+.settings-card button:last-child,
+.settings-section button:last-child,
+.preference-card button:last-child {
+  border-radius: 9px !important;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .settings-card button,
+  .settings-section button,
+  .preference-card button {
+    max-width: 100%;
+    margin-bottom: 7px !important;
+  }
+}
+
+/* ==========================================
+   StockScope - Header Account Menu Fix
+   Matches the actual App.jsx class names
+   ========================================== */
+
+.topbar-actions {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+/* User avatar button */
+.top-avatar-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  border: 1px solid #5269a5 !important;
+  border-radius: 50% !important;
+  background: linear-gradient(135deg, #7667f7, #3478e5) !important;
+  color: #ffffff !important;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.top-avatar-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 0 4px rgba(118, 103, 247, 0.16);
+}
+
+/* Account dropdown */
+.account-popover {
+  position: absolute;
+  z-index: 1000;
+  top: calc(100% + 12px);
+  right: 0;
+  width: 260px;
+  padding: 12px;
+  border: 1px solid #2c3e5b;
+  border-radius: 14px;
+  background: #111c2d;
+  color: #eaf0ff;
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.42);
+  animation: account-menu-enter 0.18s ease-out;
+}
+
+/* Account name and avatar row */
+.account-popover-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 8px 15px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #283750;
+}
+
+.account-popover-head .avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  border: 1px solid #5269a5;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #7667f7, #3478e5);
+  color: white;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.account-popover-head > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+
+.account-popover-head strong {
+  color: #f4f7ff;
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.account-popover-head small {
+  overflow-wrap: anywhere;
+  color: #91a3c3;
+  font-size: 11px;
+}
+
+/* Dropdown action buttons */
+.account-popover > button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 40px;
+  margin: 4px 0;
+  padding: 10px 12px;
+  border: 1px solid transparent !important;
+  border-radius: 9px !important;
+  background: transparent !important;
+  color: #dce6fa !important;
+  text-align: left;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.18s ease, color 0.18s ease;
+}
+
+.account-popover > button:hover {
+  border-color: #344968 !important;
+  background: #1d2b43 !important;
+  color: #ffffff !important;
+  transform: none !important;
+}
+
+/* Create account button */
+.account-popover > button:first-of-type {
+  color: #bfc5ff !important;
+}
+
+.account-popover > button:first-of-type:hover {
+  background: rgba(118, 103, 247, 0.15) !important;
+}
+
+/* Logout button */
+.account-popover > button:last-child {
+  color: #ff9b9b !important;
+}
+
+.account-popover > button:last-child:hover {
+  border-color: rgba(248, 113, 113, 0.2) !important;
+  background: rgba(248, 113, 113, 0.1) !important;
+  color: #ffb4b4 !important;
+}
+
+@keyframes account-menu-enter {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 600px) {
+  .account-popover {
+    position: fixed;
+    top: 66px;
+    right: 12px;
+    width: min(280px, calc(100vw - 24px));
+  }
+
+  .topbar-actions {
+    gap: 7px;
+  }
+}
